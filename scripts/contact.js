@@ -18,9 +18,11 @@ function handleSubmit(event) {
     form.reset();
 
     // Hide message after 5 seconds
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 5000);
+    if (formMessage) {
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 5000);
+    }
 
     return false;
 }

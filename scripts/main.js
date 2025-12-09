@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
-        if (!event.target.closest('.navbar')) {
+        if (navMenu && !event.target.closest('.navbar')) {
             navMenu.classList.remove('active');
         }
     });

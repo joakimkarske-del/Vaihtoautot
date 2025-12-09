@@ -2,12 +2,6 @@
 let allCars = [];
 let filteredCars = [];
 
-document.addEventListener('DOMContentLoaded', function() {
-    allCars = [...cars];
-    filteredCars = [...cars];
-    displayCars(filteredCars);
-});
-
 // Display cars in the grid
 function displayCars(carsToDisplay) {
     const inventoryGrid = document.getElementById('inventoryGrid');
@@ -89,8 +83,14 @@ function resetFilters() {
     displayCars(filteredCars);
 }
 
-// Allow Enter key to trigger search
+// Initialize inventory page
 document.addEventListener('DOMContentLoaded', function() {
+    // Load all cars
+    allCars = [...cars];
+    filteredCars = [...cars];
+    displayCars(filteredCars);
+    
+    // Allow Enter key to trigger search
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
         searchInput.addEventListener('keypress', function(event) {
