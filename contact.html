@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ota yhteyttä - Vaihtoautot">
+    <title>Yhteystiedot - Vaihtoautot</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🚗 Vaihtoautot</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="cars.html">Autot</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="contact.html" class="active">Yhteystiedot</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Ota yhteyttä</h1>
+            <p>Autamme mielellään autoasi koskevissa kysymyksissä</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Lähetä meille viesti</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nimi *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Sähköposti *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Puhelinnumero</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Aihe *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Valitse aihe</option>
+                                <option value="kysymys_autosta">Kysymys autosta</option>
+                                <option value="koeajo">Koeajon varaaminen</option>
+                                <option value="rahoitus">Rahoituskysymys</option>
+                                <option value="vaihtoauto">Vaihtoauton arviointi</option>
+                                <option value="muu">Muu kysymys</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Viesti *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                Hyväksyn tietosuojakäytännön *
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Lähetä viesti</button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <h2>Yhteystiedot</h2>
+                    
+                    <div class="info-block">
+                        <h3>📍 Osoite</h3>
+                        <p>Autotie 123<br>00100 Helsinki<br>Suomi</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>📞 Puhelin</h3>
+                        <p><a href="tel:+358401234567">+358 40 123 4567</a></p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>✉️ Sähköposti</h3>
+                        <p><a href="mailto:info@vaihtoautot.fi">info@vaihtoautot.fi</a></p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>🕒 Aukioloajat</h3>
+                        <p>
+                            <strong>Maanantai - Perjantai:</strong> 9:00 - 18:00<br>
+                            <strong>Lauantai:</strong> 10:00 - 15:00<br>
+                            <strong>Sunnuntai:</strong> Suljettu
+                        </p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>🚗 Löydä meidät</h3>
+                        <p>Liikkeemme sijaitsee keskeisellä paikalla Helsingissä, hyvien liikenneyhteyksien varrella. Tervetuloa tutustumaan valikoimaamme!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vaihtoautot</h3>
+                    <p>Luotettava kumppanisi autokaupassa jo vuodesta 2015</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Yhteystiedot</h3>
+                    <p>📍 Autotie 123, 00100 Helsinki</p>
+                    <p>📞 +358 40 123 4567</p>
+                    <p>✉️ info@vaihtoautot.fi</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Aukioloajat</h3>
+                    <p>Ma-Pe: 9:00 - 18:00</p>
+                    <p>La: 10:00 - 15:00</p>
+                    <p>Su: Suljettu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vaihtoautot. Kaikki oikeudet pidätetään.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
