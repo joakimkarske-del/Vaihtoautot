@@ -699,3 +699,7 @@ footer {
         transform: translateY(0);
     }
 }
+
+.animate-in {
+    animation: fadeIn 0.5s ease-out;
+}

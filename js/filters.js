@@ -27,8 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (selectedPrice) {
                 const priceParts = selectedPrice.split('-');
                 if (priceParts.length === 2) {
-                    const [minPrice, maxPrice] = priceParts.map(Number);
-                    if (price < minPrice || price > maxPrice) {
+                    const minPrice = Number(priceParts[0]);
+                    const maxPrice = Number(priceParts[1]);
+                    if (!isNaN(minPrice) && !isNaN(maxPrice) && (price < minPrice || price > maxPrice)) {
                         showCard = false;
                     }
                 }
@@ -38,8 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (selectedYear) {
                 const yearParts = selectedYear.split('-');
                 if (yearParts.length === 2) {
-                    const [minYear, maxYear] = yearParts.map(Number);
-                    if (year < minYear || year > maxYear) {
+                    const minYear = Number(yearParts[0]);
+                    const maxYear = Number(yearParts[1]);
+                    if (!isNaN(minYear) && !isNaN(maxYear) && (year < minYear || year > maxYear)) {
                         showCard = false;
                     }
                 }
@@ -48,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show or hide card
             if (showCard) {
                 card.style.display = 'block';
-                // Add fade-in animation
-                card.style.animation = 'fadeIn 0.5s';
+                card.classList.add('animate-in');
             } else {
                 card.style.display = 'none';
+                card.classList.remove('animate-in');
             }
         });
     }
