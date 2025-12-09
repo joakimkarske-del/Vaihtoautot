@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selaa käytettyjä autoja - laadukkaat vaihtoautot">
+    <title>Autot - Vaihtoautot</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🚗 Vaihtoautot</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="cars.html" class="active">Autot</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="contact.html">Yhteystiedot</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Vaihtoautomme</h1>
+            <p>Löydä täydellinen auto laajasta valikoimastamme</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-bar">
+                <select id="brandFilter" class="filter-select">
+                    <option value="">Kaikki merkit</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="bmw">BMW</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                </select>
+                <select id="priceFilter" class="filter-select">
+                    <option value="">Kaikki hinnat</option>
+                    <option value="0-15000">Alle 15 000 €</option>
+                    <option value="15000-25000">15 000 - 25 000 €</option>
+                    <option value="25000-40000">25 000 - 40 000 €</option>
+                    <option value="40000-999999">Yli 40 000 €</option>
+                </select>
+                <select id="yearFilter" class="filter-select">
+                    <option value="">Kaikki vuosikerrat</option>
+                    <option value="2024-2025">2024-2025</option>
+                    <option value="2021-2023">2021-2023</option>
+                    <option value="2018-2020">2018-2020</option>
+                    <option value="2015-2017">2015-2017</option>
+                </select>
+                <button id="resetFilters" class="btn btn-secondary">Tyhjennä</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Grid -->
+    <section class="cars-section">
+        <div class="container">
+            <div id="carsGrid" class="car-grid">
+                <!-- Car Card 1 -->
+                <div class="car-card" data-brand="toyota" data-price="22900" data-year="2020">
+                    <img src="images/car1.jpg" alt="Toyota Corolla 2020" onerror="this.src='https://via.placeholder.com/400x300?text=Toyota+Corolla+2020'">
+                    <div class="car-info">
+                        <h3>Toyota Corolla</h3>
+                        <p class="car-year">2020 • 45 000 km</p>
+                        <p class="car-description">1.8 Hybrid Active, automaatti, hyvin varusteltu</p>
+                        <div class="car-specs">
+                            <span>⛽ Hybridi</span>
+                            <span>🔧 Automaatti</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="price">22 900 €</span>
+                            <a href="car-details.html?id=1" class="btn btn-secondary">Katso lisää</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="car-card" data-brand="volkswagen" data-price="18500" data-year="2019">
+                    <img src="images/car2.jpg" alt="Volkswagen Golf 2019" onerror="this.src='https://via.placeholder.com/400x300?text=VW+Golf+2019'">
+                    <div class="car-info">
+                        <h3>Volkswagen Golf</h3>
+                        <p class="car-year">2019 • 62 000 km</p>
+                        <p class="car-description">1.5 TSI Style, manuaali, suomiauto</p>
+                        <div class="car-specs">
+                            <span>⛽ Bensiini</span>
+                            <span>🔧 Manuaali</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="price">18 500 €</span>
+                            <a href="car-details.html?id=2" class="btn btn-secondary">Katso lisää</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 3 -->
+                <div class="car-card" data-brand="volvo" data-price="42900" data-year="2021">
+                    <img src="images/car3.jpg" alt="Volvo XC60 2021" onerror="this.src='https://via.placeholder.com/400x300?text=Volvo+XC60+2021'">
+                    <div class="car-info">
+                        <h3>Volvo XC60</h3>
+                        <p class="car-year">2021 • 28 000 km</p>
+                        <p class="car-description">D4 AWD Momentum, neliveto, huippuvarustelu</p>
+                        <div class="car-specs">
+                            <span>⛽ Diesel</span>
+                            <span>🔧 Automaatti</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="price">42 900 €</span>
+                            <a href="car-details.html?id=3" class="btn btn-secondary">Katso lisää</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 4 -->
+                <div class="car-card" data-brand="bmw" data-price="28900" data-year="2019">
+                    <img src="images/car4.jpg" alt="BMW 3-sarja 2019" onerror="this.src='https://via.placeholder.com/400x300?text=BMW+3-sarja+2019'">
+                    <div class="car-info">
+                        <h3>BMW 3-sarja</h3>
+                        <p class="car-year">2019 • 55 000 km</p>
+                        <p class="car-description">320d xDrive M Sport, neliveto, navigointi</p>
+                        <div class="car-specs">
+                            <span>⛽ Diesel</span>
+                            <span>🔧 Automaatti</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="price">28 900 €</span>
+                            <a href="car-details.html?id=4" class="btn btn-secondary">Katso lisää</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 5 -->
+                <div class="car-card" data-brand="mercedes" data-price="35500" data-year="2020">
+                    <img src="images/car5.jpg" alt="Mercedes-Benz C-Class 2020" onerror="this.src='https://via.placeholder.com/400x300?text=Mercedes+C-Class+2020'">
+                    <div class="car-info">
+                        <h3>Mercedes-Benz C-Class</h3>
+                        <p class="car-year">2020 • 38 000 km</p>
+                        <p class="car-description">C 220 d AMG Line, nahkasisusta, LED-valot</p>
+                        <div class="car-specs">
+                            <span>⛽ Diesel</span>
+                            <span>🔧 Automaatti</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="price">35 500 €</span>
+                            <a href="car-details.html?id=5" class="btn btn-secondary">Katso lisää</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 6 -->
+                <div class="car-card" data-brand="toyota" data-price="16900" data-year="2018">
+                    <img src="images/car6.jpg" alt="Toyota Yaris 2018" onerror="this.src='https://via.placeholder.com/400x300?text=Toyota+Yaris+2018'">
+                    <div class="car-info">
+                        <h3>Toyota Yaris</h3>
+                        <p class="car-year">2018 • 72 000 km</p>
+                        <p class="car-description">1.5 Hybrid Active, taloudellinen kaupunkiauto</p>
+                        <div class="car-specs">
+                            <span>⛽ Hybridi</span>
+                            <span>🔧 Automaatti</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="price">16 900 €</span>
+                            <a href="car-details.html?id=6" class="btn btn-secondary">Katso lisää</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vaihtoautot</h3>
+                    <p>Luotettava kumppanisi autokaupassa jo vuodesta 2015</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Yhteystiedot</h3>
+                    <p>📍 Autotie 123, 00100 Helsinki</p>
+                    <p>📞 +358 40 123 4567</p>
+                    <p>✉️ info@vaihtoautot.fi</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Aukioloajat</h3>
+                    <p>Ma-Pe: 9:00 - 18:00</p>
+                    <p>La: 10:00 - 15:00</p>
+                    <p>Su: Suljettu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vaihtoautot. Kaikki oikeudet pidätetään.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+</html>

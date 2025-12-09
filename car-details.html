@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Auton yksityiskohdat - Vaihtoautot">
+    <title>Auton tiedot - Vaihtoautot</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🚗 Vaihtoautot</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="cars.html">Autot</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="contact.html">Yhteystiedot</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Car Details Section -->
+    <section class="car-details-section">
+        <div class="container">
+            <a href="cars.html" class="back-link">← Takaisin autoihin</a>
+            
+            <div id="carDetailsContent" class="car-details-content">
+                <!-- Content loaded by JavaScript -->
+                <div class="loading">Ladataan...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Kiinnostuitko tästä autosta?</h2>
+            <p>Ota yhteyttä ja varaa koeajo tai kysy lisätietoja</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Ota yhteyttä</a>
+                <a href="tel:+358401234567" class="btn btn-secondary">📞 Soita meille</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vaihtoautot</h3>
+                    <p>Luotettava kumppanisi autokaupassa jo vuodesta 2015</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Yhteystiedot</h3>
+                    <p>📍 Autotie 123, 00100 Helsinki</p>
+                    <p>📞 +358 40 123 4567</p>
+                    <p>✉️ info@vaihtoautot.fi</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Aukioloajat</h3>
+                    <p>Ma-Pe: 9:00 - 18:00</p>
+                    <p>La: 10:00 - 15:00</p>
+                    <p>Su: Suljettu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vaihtoautot. Kaikki oikeudet pidätetään.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/car-details.js"></script>
+</body>
+</html>
