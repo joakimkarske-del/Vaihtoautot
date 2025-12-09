@@ -25,17 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Price filter
             if (selectedPrice) {
-                const [minPrice, maxPrice] = selectedPrice.split('-').map(Number);
-                if (price < minPrice || price > maxPrice) {
-                    showCard = false;
+                const priceParts = selectedPrice.split('-');
+                if (priceParts.length === 2) {
+                    const [minPrice, maxPrice] = priceParts.map(Number);
+                    if (price < minPrice || price > maxPrice) {
+                        showCard = false;
+                    }
                 }
             }
 
             // Year filter
             if (selectedYear) {
-                const [minYear, maxYear] = selectedYear.split('-').map(Number);
-                if (year < minYear || year > maxYear) {
-                    showCard = false;
+                const yearParts = selectedYear.split('-');
+                if (yearParts.length === 2) {
+                    const [minYear, maxYear] = yearParts.map(Number);
+                    if (year < minYear || year > maxYear) {
+                        showCard = false;
+                    }
                 }
             }
 
@@ -71,19 +77,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-// Add CSS animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-`;
-document.head.appendChild(style);

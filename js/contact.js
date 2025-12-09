@@ -1,4 +1,6 @@
 // Contact form handling
+const MESSAGE_DISPLAY_DURATION = 5000;
+
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
@@ -51,9 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Scroll to message
         formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-        // Hide message after 5 seconds
+        // Hide message after configured duration
         setTimeout(() => {
             formMessage.style.display = 'none';
-        }, 5000);
+        }, MESSAGE_DISPLAY_DURATION);
     }
 });
