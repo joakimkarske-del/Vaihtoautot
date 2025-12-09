@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Validate email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            // Validate email (more robust pattern)
+            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
             if (!emailRegex.test(data.email)) {
                 showMessage('Syötä kelvollinen sähköpostiosoite', 'error');
                 return;
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Simulate form submission (in a real application, this would send to a server)
-            console.log('Form data:', data);
+            // Form data would be sent to backend here
             
             // Show success message
             showMessage('Kiitos viestistäsi! Otamme sinuun yhteyttä pian.', 'success');

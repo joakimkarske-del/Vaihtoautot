@@ -72,9 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reset filters
     if (resetButton) {
         resetButton.addEventListener('click', function() {
-            brandFilter.value = '';
-            priceFilter.value = '';
-            yearFilter.value = '';
+            if (brandFilter) brandFilter.value = '';
+            if (priceFilter) priceFilter.value = '';
+            if (yearFilter) yearFilter.value = '';
             filterCars();
         });
     }

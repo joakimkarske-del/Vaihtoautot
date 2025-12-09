@@ -1,5 +1,12 @@
 // Car details page - Dynamic content loading
 document.addEventListener('DOMContentLoaded', function() {
+    // HTML escape function to prevent XSS
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
     const carId = urlParams.get('id');
     const contentDiv = document.getElementById('carDetailsContent');
@@ -215,25 +222,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Build specs HTML
     let specsHTML = '';
     for (const [key, value] of Object.entries(car.specs)) {
-        specsHTML += `<li><strong>${key}:</strong> <span>${value}</span></li>`;
+        specsHTML += `<li><strong>${escapeHtml(key)}:</strong> <span>${escapeHtml(value)}</span></li>`;
     }
 
     // Build features HTML
     let featuresHTML = '';
     car.features.forEach(feature => {
-        featuresHTML += `<li>${feature}</li>`;
+        featuresHTML += `<li>${escapeHtml(feature)}</li>`;
     });
 
     // Generate content
     contentDiv.innerHTML = `
         <div class="car-details-header">
-            <h1>${car.name}</h1>
-            <p class="car-year">${car.year} • ${car.mileage} km</p>
-            <p class="price" style="font-size: 2.5rem; margin-top: 1rem;">${car.price} €</p>
+            <h1>${escapeHtml(car.name)}</h1>
+            <p class="car-year">${escapeHtml(car.year)} • ${escapeHtml(car.mileage)} km</p>
+            <p class="price" style="font-size: 2.5rem; margin-top: 1rem;">${escapeHtml(car.price)} €</p>
         </div>
         <div class="car-details-body">
             <div class="car-image-section">
-                <img src="${car.image}" alt="${car.name}" onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(car.name)}'">
+                <img src="${escapeHtml(car.image)}" alt="${escapeHtml(car.name)}" onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(car.name)}'">
             </div>
             <div class="car-specs-section">
                 <h2>Tekniset tiedot</h2>
@@ -243,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="car-description-section">
                 <h2>Kuvaus</h2>
-                <p>${car.description}</p>
+                <p>${escapeHtml(car.description)}</p>
                 <h2 style="margin-top: 2rem;">Varusteet</h2>
                 <ul class="features-list">
                     ${featuresHTML}
